@@ -666,9 +666,9 @@ nav {
 
 .brands-wrap {
     width: 100%;
-    --gap: 2rem 0.5rem;
+    --gap: 1rem;
 }
 
 .brands-wrap img {
-    width: 15.6rem;
+    width: 15.2rem;
 }
