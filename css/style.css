@@ -257,6 +257,7 @@ section, nav, footer {
     background-color: rgb( var(--clr-orange) );
     margin-right: auto;
     border: none;
+    cursor: pointer;
 }
 
 .btn-secondary {
@@ -269,6 +270,7 @@ section, nav, footer {
     background-color: rgb( var(--clr-black) );
     margin-right: auto;
     border: none;
+    cursor: pointer;
 }
 
 /* --------------------------- */
