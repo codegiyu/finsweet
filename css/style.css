@@ -319,7 +319,11 @@ nav {
 
 .header {
     padding: 5rem 0 10rem;
-    z-index: 1;
+    z-index: -1;
+}
+
+.header-wrap {
+    z-index: -1;
 }
 
 .header-text {
@@ -342,6 +346,7 @@ nav {
     width: 37.5rem;
     height: 39rem;
     position: relative;
+    z-index: -1;
 }
 
 .header-img {
@@ -583,4 +588,62 @@ nav {
     font-size: var(--fs-700);
     line-height: 1.8rem;
     margin-left: 1rem;
+}
+
+
+/* --------------------------- */
+/* --------CTA Section-------- */
+/* --------------------------- */
+
+.cta-section {
+    position: relative;
+    height: 29rem;
+}
+
+.cta-left-image {
+    width: 52%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/cta-left-image.png");
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -1;
+}
+
+.cta-right-image {
+    width: 48%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/cta-right-image.png");
+    background-size: cover;
+    z-index: -1;
+}
+
+.cta {
+    height: 100%;
+    z-index: 2;
+}
+
+.cta-box {
+    width: 55%;
+    height: 100%;
+}
+
+.cta-box-wrap {
+    width: 82%;
+    --gap: 3rem;
+}
+
+
+/* --------------------------- */
+/* ----Experience Section----- */
+/* --------------------------- */
+
+.experience-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
