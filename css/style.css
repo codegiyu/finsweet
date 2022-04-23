@@ -9,6 +9,7 @@
 
 :root {
     --clr-white: 255, 255, 255;
+    --clr-border-white: 225, 225, 225;
     --clr-black: 30, 27, 27;
     --clr-orange: 255, 100, 51;
     --clr-purple: 102, 28, 231;
@@ -363,7 +364,7 @@ nav {
     border-radius: 59px;
     z-index: 10;
     /* background: linear-gradient(138.85deg, #fff -38.72%, #fff 153.95%); */
-    border: 0.75rem solid rgba( var(--clr-white), 0.43);
+    border: 0.75rem solid rgba( var(--clr-border-white), 0.43);
     box-shadow: 0 28 118 0 rgba(109, 108, 115, 0.12);
 }
 
@@ -389,7 +390,7 @@ nav {
     right: -8%;
     border-radius: 59px;
     z-index: 2;
-    border: 0.75rem solid rgba( var(--clr-white), 0.43);
+    border: 0.75rem solid rgba( var(--clr-border-white), 0.43);
     box-shadow: 0 28 118 0 rgba(115, 114, 119, 0.12);
 }
 
