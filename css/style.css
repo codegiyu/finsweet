@@ -732,7 +732,13 @@ nav {
     grid-template-rows: 5rem;
     grid-template-areas: ". lines arrows";
     align-items: center;
+    /* border: 1px solid black; */
 }
+
+/* .testimonial-bottom-wrap * {
+    border: 1px solid black;
+} */
+
 .feedback-slide-marker-line-wrap {
     grid-area: lines;
     width: auto;
@@ -775,4 +781,133 @@ nav {
 
 .feedback-slide-arrow-container:nth-of-type(2):after {
     content: "\2192";
+}
+
+
+/* --------------------------- */
+/* --------Faq Section-------- */
+/* --------------------------- */
+
+.faq-section {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.faq-section-wrap {
+    --gap: 7rem;
+}
+
+.faq-boxes-wrap {
+    --gap: 0.5rem;
+}
+
+.faq-box {
+    width: 55%;
+    padding: 2rem 3rem;
+}
+
+.faq-checkbox {
+    width: 100%;
+    height: 100%;
+    display: none;
+    visibility: hidden;
+}
+
+.faq-checkbox:checked ~ .faq-answer {
+    height: auto;
+    /* display: block; */
+    visibility: visible;
+}
+
+.faq-checkbox:checked ~ label .faq-toggle span::before {
+    transform: rotate(0deg) translateY(0.06rem);
+}
+
+.faq-box > label > p {
+    width: 70%;
+    /* border: 1px solid black; */
+}
+
+.faq-label-wrap p {
+    line-height: 3.1875rem;
+}
+
+.faq-toggle {
+    width: 3.1875rem;
+    aspect-ratio: 1.0625;
+    background-color: rgb( var(--clr-orange) );
+    --gap: 0;
+}
+
+.faq-toggle span {
+    width: 1.1rem;
+    height: 2px;
+    background-color: rgb( var(--clr-white) );
+    position: relative;
+}
+
+.faq-toggle span::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb( var(--clr-white) );
+    /* z-index: 10; */
+    position: absolute;
+    transform: rotate(90deg) translateY(-0.06rem);
+    transition: transform 100ms ease-in;
+}
+
+.faq-answer {
+    width: 85%;
+    height: 0;
+    /* display: none; */
+    visibility: hidden;
+    margin-top: 1rem;
+    /* transition: all 200ms ease-in; */
+}
+
+
+/* --------------------------- */
+/* -----------Footer---------- */
+/* --------------------------- */
+
+footer {
+    background-color: rgb( var(--clr-black), 0.98);
+    padding-inline: 0;
+}
+
+.footer-wrap {
+    --gap: 12rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.footer-top-left {
+    width: 35%;
+}
+
+.footer-top-right {
+    width: 52%;
+}
+
+.footer-top-left-wrap {
+    --gap: 4rem;
+}
+
+.social-media-wrap {
+    --gap: 1rem;
+}
+
+.footer-top-right-wrap {
+    --gap: 2rem;
+}
+
+.footer-top-right-block {
+    --gap: 0.5rem;
+}
+
+.footer-bottom {
+    background-color: rgb( var(--clr-black) );
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
