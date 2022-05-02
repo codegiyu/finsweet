@@ -585,6 +585,8 @@ nav {
 .process-text-group {
     --gap: 1.4rem;
     padding-top: 0.6rem;
+    height: 11rem;
+    overflow: hidden;
 /*     padding-bottom: 1rem; */
 }
 
@@ -1354,12 +1356,13 @@ footer {
 
     .service, .rating {
         border-radius: 6px;
+        border: none;
     }
 
     .service-wrap {
         flex-direction: column;
         border-radius: 6px;
-        padding: 1.3rem;
+        padding: 1rem;
     }
 
     .rating-wrap {
@@ -1378,18 +1381,28 @@ footer {
 
     .offer-section-wrap h2 {
         width: 100%;
+        margin-top: 1.5rem;
     }
 
     .offer-boxes-wrap {
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .offer-box {
         width: calc( (var(--ctnr-width) - 0.3rem) / 2);
     }
 
+    .offer-box-wrap {
+        transform: scale(0.5);
+    }
+
     .cta-box {
         width: 100%;
+    }
+
+    .cta-box h3 {
+        font-size: var(--fs-600);
+        line-height: 3.5rem;
     }
 
     .experience-wrap {
@@ -1416,11 +1429,12 @@ footer {
     }
 
     .feedback-box {
-        height: 25rem;
+        height: 28rem;
     }
 
     .faq-box {
         width: 100%;
+        padding: 1rem 1.5rem;
     }
 
     .footer-wrap {
@@ -1502,6 +1516,19 @@ footer {
     }
 
     .home-quote-form-input {
+        width: 100%;
+    }
+
+    .process-text-group {
+        padding-bottom: 0;
+    }
+
+    .process-text-group h6 {
+        width: 100%;
+        font-size: var(--fs-400);
+    }
+
+    .process-text-group p {
         width: 100%;
     }
 
