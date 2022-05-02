@@ -8,6 +8,7 @@
     <title>Home | {finsweet</title>
 </head>
 <body>
+    <a id="back-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
     <nav>
         <div class="navwrap container bg-white flex flex-align-center flex-space-between">
             <div class="logo-section flex flex-align-center">
@@ -33,6 +34,38 @@
                     </div>
                 </div>
             </div>
+            <div class="menu-btn bg-white flex flex-justify-center flex-align-center">
+                <div class="bars-wrap flex flex-vertical flex-space-between">
+                    <span class="bars bg-black"></span>
+                    <span class="bars bg-black"></span>
+                    <span class="bars bg-black"></span>
+                </div>
+            </div>
+            <div class="menu-modal relative">
+                <div class="menu-modal-wrap flex flex-vertical no-decoration-family text-white">
+                    <a href="#" class="logo-link modal-close">
+                        <img src="img/Logo-white.png" alt="finsweet logo" srcset="" class="logo-img" width="200px">
+                    </a>
+                    <div class="modal-links-section flex flex-vertical">
+                        <ul class="modal-links-list flex flex-vertical">
+                            <li class="modal-links-list-item"><a href="#" class="modal-links fs-heading-5 modal-close">Home</a></li>
+                            <li class="modal-links-list-item"><a href="#" class="modal-links fs-heading-5 modal-close">About us</a></li>
+                            <li class="modal-links-list-item"><a href="#" class="modal-links fs-heading-5 modal-close">Services</a></li>
+                            <li class="modal-links-list-item"><a href="#" class="modal-links fs-heading-5 modal-close">Contact</a></li>
+                            <li class="modal-links-list-item"><a href="#" class="modal-links fs-heading-5 modal-close">Blog</a></li>
+                        </ul>
+                        <div class="nav-contact flex">
+                            <a href="#" class="whatsapp-link flex-align-self-center">
+                                <img src="img/Assistance Icon.png" alt="" srcset="" width="50px" height="50px">
+                            </a>
+                            <div class="nav-contact-details flex flex-vertical">
+                                <p class="nav-contact-details-caption fs-title-2 opacity-7">Road Assistance</p>
+                                <p class="nav-contact-phone-number fs-title-1">1800 265 24 52</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <section class="header bg-white">
@@ -51,30 +84,32 @@
                 </div>
             </div>
             <div class="header-image bg-white">
-                <img src="img/hero-pic.png" alt="A mechanic working on a car with the hood open" srcset="" class="header-img">
-                <div class="service">
-                    <div class="service-wrap bg-white flex flex-align-center">
-                        <div class="service-circle bg-mint circle flex">
-                            <div class="service-circle-wrap text-white flex flex-align-self-center">
-                                <p class="fs-title-2">24</p>
-                                <p class="service-circle-wrap-little-text fs-body-2">hr</p>
+                <!-- <img src="img/hero-pic.png" alt="A mechanic working on a car with the hood open" srcset="" class="header-img"> -->
+                <div class="header-image-container">
+                    <div class="service">
+                        <div class="service-wrap bg-white flex flex-align-center">
+                            <div class="service-circle bg-mint circle flex">
+                                <div class="service-circle-wrap text-white flex flex-align-self-center">
+                                    <p class="fs-title-2">24</p>
+                                    <p class="service-circle-wrap-little-text fs-body-2">hr</p>
+                                </div>
                             </div>
+                            <p class="fs-title-2 text-black">Quick service</p>
                         </div>
-                        <p class="fs-title-2 text-black">Quick service</p>
                     </div>
-                </div>
-                <div class="rating">
-                    <div class="rating-wrap bg-white flex">
-                        <div class="rating-text">
-                            <p class="fs-title-2">4.5/5</p>
-                            <p class="fs-caption opacity-7">Rating</p>
-                        </div>
-                        <div class="rating-stars flex flex-align-center">
-                            <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
-                            <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
-                            <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
-                            <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
-                            <img src="img/half-star.png" alt="" srcset="" width="25rem" height="25rem">
+                    <div class="rating">
+                        <div class="rating-wrap bg-white flex">
+                            <div class="rating-text">
+                                <p class="fs-title-2">4.5/5</p>
+                                <p class="fs-caption opacity-7">Rating</p>
+                            </div>
+                            <div class="rating-stars flex flex-align-center">
+                                <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
+                                <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
+                                <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
+                                <img src="img/full star.png" alt="" srcset="" width="20rem" height="20rem">
+                                <img src="img/half-star.png" alt="" srcset="" width="25rem" height="25rem">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -295,46 +330,82 @@
     <section class="testimonials-section bg-lightgrey">
         <div class="testimonials-section-wrap container flex flex-vertical text-black">
             <h3 class="fs-heading-h3 center-text">Our customers say the nicest things about our service</h3>
-            <div class="feedback-wrap flex flex-space-between">
-                <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
-                    <div class="feedback-box-wrap flex flex-vertical">
-                        <div class="feedback-top-wrap flex">
-                            <div class="feedback-top-left flex flex-align-center">
-                                <div class="feedback-img-one circle"></div>
+            <div class="feedback-wrap slide-box flex flex-space-between">
+                <div class="feedback-slide slide-1">
+                    <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
+                        <div class="feedback-box-wrap flex flex-vertical">
+                            <div class="feedback-top-wrap flex">
+                                <div class="feedback-top-left flex flex-align-center">
+                                    <div class="feedback-img-one circle"></div>
+                                </div>
+                                <div class="feedback-top-right">
+                                    <p class="fs-title-2">Jonathan Vallem</p>
+                                    <p class="fs-body-2 text-grey">New York</p>
+                                </div>
                             </div>
-                            <div class="feedback-top-right">
-                                <p class="fs-title-2">Jonathan Vallem</p>
-                                <p class="fs-body-2 text-grey">New York</p>
-                            </div>
+                            <p class="fs-title-2">I have got my car repaired at Finsweet many times before. They are good at what they do. Not only did they repair my car in a short comprehensive look on all the working</p>
                         </div>
-                        <p class="fs-title-2">I have got my car repaired at Finsweet many times before. They are good at what they do. Not only did they repair my car in a short comprehensive look on all the working</p>
                     </div>
                 </div>
-                <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
-                    <div class="feedback-box-wrap flex flex-vertical">
-                        <div class="feedback-top-wrap flex">
-                            <div class="feedback-top-left">
-                                <div class="feedback-img-two circle"></div>
+                <div class="feedback-slide slide-2">
+                    <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
+                        <div class="feedback-box-wrap flex flex-vertical">
+                            <div class="feedback-top-wrap flex">
+                                <div class="feedback-top-left">
+                                    <div class="feedback-img-two circle"></div>
+                                </div>
+                                <div class="feedback-top-right">
+                                    <p class="fs-title-2">Smith Johnson</p>
+                                    <p class="fs-body-2 text-grey">New York</p>
+                                </div>
                             </div>
-                            <div class="feedback-top-right">
-                                <p class="fs-title-2">Smith Johnson</p>
-                                <p class="fs-body-2 text-grey">New York</p>
-                            </div>
+                            <p class="fs-title-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veritatis tenetur assumenda minima vitae accusamus eum dolorum ut ipsa minus.</p>
                         </div>
-                        <p class="fs-title-2">I have got my car repaired at Finsweet many times before. They are good at what they do. Not only did they repair my car in a short comprehensive look on all the working</p>
+                    </div>
+                </div>
+                <div class="feedback-slide slide-3">
+                    <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
+                        <div class="feedback-box-wrap flex flex-vertical">
+                            <div class="feedback-top-wrap flex">
+                                <div class="feedback-top-left flex flex-align-center">
+                                    <div class="feedback-img-one circle"></div>
+                                </div>
+                                <div class="feedback-top-right">
+                                    <p class="fs-title-2">Vallem Jonathan</p>
+                                    <p class="fs-body-2 text-grey">Nevada</p>
+                                </div>
+                            </div>
+                            <p class="fs-title-2">I have got my car repaired at Finsweet many times before. They are good at what they do. Not only did they repair my car in a short comprehensive look on all the working</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-slide slide-4">
+                    <div class="feedback-box bg-white flex flex-justify-center flex-align-center">
+                        <div class="feedback-box-wrap flex flex-vertical">
+                            <div class="feedback-top-wrap flex">
+                                <div class="feedback-top-left">
+                                    <div class="feedback-img-two circle"></div>
+                                </div>
+                                <div class="feedback-top-right">
+                                    <p class="fs-title-2">Johnson Smith</p>
+                                    <p class="fs-body-2 text-grey">Boston</p>
+                                </div>
+                            </div>
+                            <p class="fs-title-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veritatis tenetur assumenda minima vitae accusamus eum dolorum ut ipsa minus.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="testimonial-bottom-wrap grid">
                 <div class="feedback-slide-marker-line-wrap flex">
-                    <span class="feedback-slide-marker-line"></span>
-                    <span class="feedback-slide-marker-line"></span>
-                    <span class="feedback-slide-marker-line active-slide-marker"></span>
-                    <span class="feedback-slide-marker-line"></span>
+                    <span class="feedback-slide-marker-line" onclick="currentSlide(1)"></span>
+                    <span class="feedback-slide-marker-line" onclick="currentSlide(2)"></span>
+                    <span class="feedback-slide-marker-line" onclick="currentSlide(3)"></span>
+                    <span class="feedback-slide-marker-line" onclick="currentSlide(4)"></span>
                 </div>
                 <div class="feedback-slide-arrows-wrap flex">
-                    <div class="feedback-slide-arrow-container circle bg-white"></div>
-                    <div class="feedback-slide-arrow-container circle bg-white"></div>
+                    <div class="feedback-slide-arrow-container left-slide-control circle bg-white" onclick="plusSlides(-1)"></div>
+                    <div class="feedback-slide-arrow-container right-slide-control circle bg-white" onclick="plusSlides(1)"></div>
                 </div>
             </div>
         </div>
@@ -460,5 +531,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f7881fabf.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
