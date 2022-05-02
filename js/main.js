@@ -152,7 +152,6 @@ function removeActive() {
     }
 
     menuTrigger.style.background = "white";
-    menuTrigger.style.border = "1px solid black";
 }
 
 function addActive() {
@@ -164,7 +163,6 @@ function addActive() {
     }
 
     menuTrigger.style.background = "rgb( var(--clr-orange) )";
-    menuTrigger.style.border = "none";
 }
 
 menuTrigger.addEventListener( "click" , function(el){

@@ -1195,7 +1195,6 @@ footer {
         border-radius: 5px;
         cursor: pointer;
         z-index: 11;
-        /* border: 1px solid black; */
         transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
@@ -1278,16 +1277,16 @@ footer {
     .menu-modal-wrap {
         width: 60%;
         height: 100%;
-        padding: 5rem 5rem 10rem;
+        padding: 5rem 4rem 10rem;
         background-color: rgb( var(--clr-orange) );
     }
 
     .modal-links-list {
-        padding: 2rem;
+        padding: 2rem 0;
     }
 
     .modal-links-list-item {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
 
     .service, .rating {
@@ -1321,6 +1320,10 @@ footer {
     
     html {
         font-size: 11px;
+    }
+
+    .menu-btn {
+        transform: scale(0.75);
     }
 
     .menu-modal-wrap .nav-contact {
@@ -1509,6 +1512,10 @@ footer {
     .fs-caption {
         font-size: var(--fs-100);
         line-height: 1.5rem;
+    }
+
+    .menu-btn {
+        transform: scale(0.6);
     }
 
     .header-image {
