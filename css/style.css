@@ -1195,7 +1195,7 @@ footer {
         border-radius: 5px;
         cursor: pointer;
         z-index: 11;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
