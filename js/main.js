@@ -14,130 +14,131 @@ btn.on('click', function(e) {
 });
 
 
-let slideIndex = 1;
-let myTimer;
-let viewportWidth = document.documentElement.clientWidth;
 
+// window.addEventListener('resize', () => {
+    let slideIndex = 1;
+    let myTimer;
+    let viewportWidth = document.documentElement.clientWidth;
 
-if (viewportWidth <= 950) {
-    window.addEventListener("load", function() {
-        showSlides(slideIndex);
-        myTimer = setInterval(function(){plusSlides(1)}, 5000);
-    })
+    if (viewportWidth <= 950) {
+        window.addEventListener("load", function() {
+            showSlides(slideIndex);
+            myTimer = setInterval(function(){plusSlides(1)}, 5000);
+        })
 
-    function plusSlides(n) {
-        clearInterval(myTimer);
+        function plusSlides(n) {
+            clearInterval(myTimer);
 
-        if(n < 0){
-            showSlides(slideIndex += -1);
-        } else {
-            showSlides(slideIndex += 1);
+            if(n < 0){
+                showSlides(slideIndex += -1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+            if(n === -1){
+                myTimer = setInterval(function() {plusSlides(n+2)}, 5000);
+            } else {
+                myTimer = setInterval(function() {plusSlides(n+1)}, 5000);
+            }
         }
 
-        if(n === -1){
-            myTimer = setInterval(function() {plusSlides(n+2)}, 5000);
-        } else {
-            myTimer = setInterval(function() {plusSlides(n+1)}, 5000);
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("feedback-slide");
+            let lines = document.getElementsByClassName("feedback-slide-marker-line");
+
+            if(n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if(n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for(i = 0; i < lines.length; i++) {
+                lines[i].className = lines[i].className.replace(" active-slide-marker", " ");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            lines[slideIndex - 1].className += " active-slide-marker";
+        }
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function() {plusSlides(n + 1)}, 5000);
+            showSlides(slideIndex = n);
         }
     }
 
-    function showSlides(n) {
-        let i;
+    if (viewportWidth > 950) {
         let slides = document.getElementsByClassName("feedback-slide");
         let lines = document.getElementsByClassName("feedback-slide-marker-line");
+        let slideArray = [];
 
-        if(n > slides.length) {
-            slideIndex = 1;
-        }
+        window.addEventListener("load", function() {
+            showSlides(slideIndex);
+            myTimer = setInterval(function(){plusSlides(1)}, 5000);
+        })
 
-        if(n < 1) {
-            slideIndex = slides.length;
-        }
+        function plusSlides(n) {
+            clearInterval(myTimer);
 
-        for(i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
+            if(n < 0){
+                showSlides(slideIndex += -1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
 
-        for(i = 0; i < lines.length; i++) {
-            lines[i].className = lines[i].className.replace(" active-slide-marker", " ");
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-        lines[slideIndex - 1].className += " active-slide-marker";
-    }
-
-    function currentSlide(n) {
-        clearInterval(myTimer);
-        myTimer = setInterval(function() {plusSlides(n + 1)}, 5000);
-        showSlides(slideIndex = n);
-    }
-}
-
-if (viewportWidth > 950) {
-    let slides = document.getElementsByClassName("feedback-slide");
-    let lines = document.getElementsByClassName("feedback-slide-marker-line");
-    let slideArray = [];
-
-    window.addEventListener("load", function() {
-        showSlides(slideIndex);
-        myTimer = setInterval(function(){plusSlides(1)}, 5000);
-    })
-
-    function plusSlides(n) {
-        clearInterval(myTimer);
-
-        if(n < 0){
-            showSlides(slideIndex += -1);
-        } else {
-            showSlides(slideIndex += 1);
-        }
-
-        if(n === -1){
-            myTimer = setInterval(function() {plusSlides(n+2)}, 5000);
-        } else {
-            myTimer = setInterval(function() {plusSlides(n+1)}, 5000);
-        }
-    }
-    
-    function showSlides(n) {
-        let i;
-
-        if (n == 1) {
-            slideArray = [slides[0], slides[1]];
-        } else if (n == 2) {
-            slideArray = [slides[1], slides[2]];
-        } else if (n == 3) {
-            slideArray = [slides[2], slides[3]];
-        } else if (n == 4) {
-            slideArray = [slides[3], slides[0]];
-        } else if (n > 4) {
-            slideIndex = 1;
-        } else if (n > 1) {
-            slideIndex = 4;
-        }
-
-        for(i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        for(i = 0; i < lines.length; i++) {
-            lines[i].className = lines[i].className.replace(" active-slide-marker", " ");
-        }
-
-        for(i = 0; i < slideArray.length; i++) {
-            slideArray[i].style.display = "block";
+            if(n === -1){
+                myTimer = setInterval(function() {plusSlides(n+2)}, 5000);
+            } else {
+                myTimer = setInterval(function() {plusSlides(n+1)}, 5000);
+            }
         }
         
-        lines[slideIndex - 1].className += " active-slide-marker";
-    }
+        function showSlides(n) {
+            let i;
 
-    function currentSlide(n) {
-        clearInterval(myTimer);
-        myTimer = setInterval(function() {plusSlides(n + 1)}, 5000);
-        showSlides(slideIndex = n);
-    }
-}
+            if (n == 1) {
+                slideArray = [slides[0], slides[1]];
+            } else if (n == 2) {
+                slideArray = [slides[1], slides[2]];
+            } else if (n == 3) {
+                slideArray = [slides[2], slides[3]];
+            } else if (n == 4) {
+                slideArray = [slides[3], slides[0]];
+            } else if (n > slides.length) {
+                slideIndex = 1;
+            } else if (n < 1) {
+                slideIndex = slides.length;
+            }
 
+            for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for(i = 0; i < lines.length; i++) {
+                lines[i].className = lines[i].className.replace(" active-slide-marker", " ");
+            }
+
+            for(i = 0; i < slideArray.length; i++) {
+                slideArray[i].style.display = "block";
+            }
+            
+            lines[slideIndex - 1].className += " active-slide-marker";
+        }
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function() {plusSlides(n + 1)}, 5000);
+            showSlides(slideIndex = n);
+        }
+    }
+// });
 
 let menuTrigger = document.getElementsByClassName("menu-btn")[0];
 let menu = document.getElementsByClassName("menu-modal")[0];
