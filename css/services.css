@@ -1,0 +1,318 @@
+*, *::before, *::after {
+    margin: 0;
+}
+
+/* --------------------------- */
+/* --Services-Header Section-- */
+/* --------------------------- */
+
+.services-header {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.services-header-wrap {
+    --gap: 0rem;
+}
+
+.services-image-section {
+    width: 40%;
+    height: 35rem;
+    background-image: url("../img/services-hero.png");
+    background-size: cover;
+}
+
+.services-header-right {
+    width: 60%;
+    padding: 6rem;
+}
+
+.services-header-right-wrap {
+    --gap: 1.5rem;
+}
+
+.services-header-right-wrap button {
+    margin-top: 2rem;
+}
+
+
+/* --------------------------- */
+/* ------Services Section----- */
+/* --------------------------- */
+
+.services-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.services-section-wrap {
+    margin-left: 5rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: 2.3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    grid-template-areas: 
+    "leftside diagnostics engine"
+    "leftside bodywork batteries"
+    "leftside carwash acrepair";
+} 
+
+.services-section-left {
+    grid-area: leftside;
+}
+
+.services-section-left-wrap {
+    padding: 2rem;
+    --gap: 2rem;
+}
+
+.services-section-img {
+    width: 100%;
+    aspect-ratio: 1.6;
+    background: url("../img/services-img.png");
+}
+ 
+.services-link {
+    --gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.services-link span {
+    font-size: var(--fs-700);
+    line-height: 1.7rem;
+}
+
+.diagnostics {
+    grid-area: diagnostics;
+}
+
+.engine {
+    grid-area: engine;
+}
+
+.bodywork {
+    grid-area: bodywork;
+}
+
+.batteries {
+    grid-area: batteries;
+}
+
+.carwash {
+    grid-area: carwash;
+}
+
+.acrepair {
+    grid-area: acrepair;
+}
+
+.service-box {
+    width: 100%;
+    height: 100%;
+}
+
+.service-box:hover {
+    background-color: rgb( var(--clr-orange) );
+}
+
+.service-box:hover > .service-box-wrap > p {
+    color:rgb( var(--clr-white) );
+}
+
+.service-box-wrap {
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+}
+
+.service-box-wrap p {
+    text-align: center;
+}
+
+/* --------------------------- */
+/* -------How-1 Section------- */
+/* --------------------------- */
+
+.how-1 {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.how-1-left {
+    width: 45%;
+    --gap: 3rem;
+}
+
+.how-1-list {
+    --gap: 1.75rem;
+}
+
+.how-1-list li {
+    --gap: 1rem;
+}
+
+.bullet {
+    width: 3rem;
+    /* padding: 3px; */
+}
+
+.bullet span {
+    font-size: var(--fs-300);
+    line-height: 2rem;
+}
+
+.how-1-right {
+    width: 49%;
+}
+
+.how-1-img-1 {
+    width: 50%;
+    background-image: url("../img/how1-right1.png");
+    background-size: cover;
+}
+
+.how-1-img-2 {
+    width: 50%;
+    background-image: url("../img/how1-right2.png");
+    background-size: cover;
+}
+
+/* --------------------------- */
+/* -------How-2 Section------- */
+/* --------------------------- */
+
+.how-2 {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+.how-2-left {
+    width: 49%;
+}
+
+.how-2-img-1 {
+    width: 50%;
+    background-image: url("../img/how2-left1.png");
+    background-size: cover;
+}
+
+.how-2-img-2 {
+    width: 50%;
+    background-image: url("../img/how2-left2.png");
+    background-size: cover;
+}
+
+.how-2-right {
+    width: 45%;
+    --gap: 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --ctnr-width: 60rem;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+
+    .services-header-right {
+        padding: 4rem;
+    }
+
+    .services-section-wrap {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --ctnr-width: 50rem;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+
+    .services-header-wrap,
+    .how-1-wrap,
+    .how-2-wrap {
+        display: grid;
+    }
+
+    .services-image-section,
+    .services-header-right,
+    .how-1-left, .how-1-right,
+    .how-2-left, .how-2-right {
+        width: 100%;
+    }
+
+    .services-header {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .services-image-section {
+        height: 40rem;
+    }
+
+    .services-header-right {
+        height: 40rem;
+        position: absolute;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+        align-items: center;
+    }
+
+    .services-header-right p {
+        width: 90%;
+    }
+
+    .services-section-wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 15rem 15rem 15rem;
+        gap: 1.5rem;
+        grid-template-areas: 
+        "leftside leftside"
+        "diagnostics engine"
+        "bodywork batteries"
+        "carwash acrepair";
+    }
+
+    .how-1-wrap, .how-2-wrap {
+        --gap: 5rem;
+    }
+
+    .how-1-right, .how-2-left {
+        --gap: 1rem;
+    }
+
+    .how-2-left {
+        order: 2;
+    }
+
+    .how-2-right {
+        order: 1;
+    }
+
+    .how-1-img-1, .how-1-img-2,
+    .how-2-img-1, .how-2-img-2 {
+        height: 30rem;
+    }
+
+    .footer-wrap, .footer-bottom-wrap {
+        width: 90%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .how-1-img-1, .how-1-img-2,
+    .how-2-img-1, .how-2-img-2 {
+        height: 20rem;
+    }
+}

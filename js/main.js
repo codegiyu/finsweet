@@ -15,7 +15,6 @@ btn.on('click', function(e) {
 
 
 
-// window.addEventListener('resize', () => {
     let slideIndex = 1;
     let myTimer;
     let viewportWidth = document.documentElement.clientWidth;
@@ -138,7 +137,6 @@ btn.on('click', function(e) {
             showSlides(slideIndex = n);
         }
     }
-// });
 
 let menuTrigger = document.getElementsByClassName("menu-btn")[0];
 let menu = document.getElementsByClassName("menu-modal")[0];
