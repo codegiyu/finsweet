@@ -156,6 +156,7 @@
 
 .bullet {
     width: 3rem;
+    margin-bottom: auto;
     /* padding: 3px; */
 }
 
